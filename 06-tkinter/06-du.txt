@@ -1,0 +1,2 @@
+Vytvoriť program, ktorý vypíše moje A Z, dlžka strany jednoho štvorca bude 10 pixelou
+vykreslené pomocou štvorčekov zo súboru pixel_letters.jpg
