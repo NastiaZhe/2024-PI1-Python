@@ -6,6 +6,8 @@ canva = tkinter.Canvas(width=500, height=400)
 canva.pack()
 
 def jednotka(x, y,):
+    x = random.randint(3,500-33)
+    y = random.randint(3,400-73)
     canva.create_rectangle(x+10, y+10, x+20, y+20, fill=random.choice(["red", "green", "blue", "yellow"]))
     canva.create_rectangle(x+10, y+20, x+20, y+30, fill=random.choice(["red", "green", "blue", "yellow"]))
     canva.create_rectangle(x+10, y+30, x+20, y+40, fill=random.choice(["red", "green", "blue", "yellow"]))
@@ -18,9 +20,6 @@ def jednotka(x, y,):
     canva.create_rectangle(x, y+70, x+10, y+80, fill=random.choice(["red", "green", "blue", "yellow"]))
 
 for i in range(pocet):
-    x = random.randint(0,490)
-    y = random.randint(0,390)
-
-jednotka(10, 10)
+    jednotka(10, 10)
 
 tkinter.mainloop()
