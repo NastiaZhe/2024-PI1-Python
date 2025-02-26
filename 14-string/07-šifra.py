@@ -1,0 +1,3 @@
+ret = input("Zadaj text:")
+
+
