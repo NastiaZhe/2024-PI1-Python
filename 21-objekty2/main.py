@@ -1,0 +1,48 @@
+import datetime
+
+class Osoba: # triedy, vždy píšeme prvým veľkým písmenom
+    def __init__(self, meno, priezvisko, rok): # konštruktor, zavolá sa pri vzniku objektu
+        self.meno = meno # atribút objektu (vlastnosť)
+        self.priezvisko = priezvisko
+        self.rok = rok
+        self.vek = datetime.date.today().year - self.rok
+        
+    def pozdrav(self): # metóda (čo vie objekt robiť)
+        print(f"Ahoj, ja som {self.meno} {self.priezvisko} a mám {self.vek} rokov.")
+
+    def vypis_meno(self):
+        print(self.meno, self.priezvisko)
+
+    def vypis_vek(self):
+        print(self.vek)
+
+    def vypis_rok(self):
+        print(self.rok)
+    
+
+class Student(Osoba): # trieda Student zdedí atribúty a metódy od tried Osoba
+    def __init__(self, meno, priezvisko, rok, trieda):
+        super().__init__(meno, priezvisko, rok) # super - znamená, že použije atribúty z rodičovskej triedy (Osoba)
+        # Osoba.__init__(meno, priezvisko, rok)
+        self.trieda = trieda
+
+    def pozdrav(self):
+        super().pozdrav()
+        print(f"Som študentom {self.trieda} triedy.")
+        # polymorfizmus - meníme metódu pozdrav z rodičovskej triedy (Osoba)
+
+
+# nasta = Osoba("Nasťa", "Zherdieva", 2008) # vznikne objekt nasta, vytvirený pomocou triedy Osoba
+# nasta.pozdrav() # voláme metódu objektu pozdrav
+# nasta.vypis_meno()
+# nasta.vypis_rok()
+# nasta.vypis_vek()
+
+student = Student("Ján", "Študent", 2008, "1-AT")
+student.pozdrav()
+student.vypis_meno()
+student.vypis_rok()
+student.vypis_vek()
+
+clovek = Osoba("Jurko","Mrkvička", 2000)
+clovek.pozdrav()

@@ -16,7 +16,7 @@ class Auto:
     def info(self):
         print(f"AUTO: {self.znacka} {self.model}, rok vyroby {self.rok}")
 
-auto = Auto("BMW", "e34", 1995)
+auto = Auto("BMW", "e30", 1994)
 
 auto.info()
 auto.zapni_svetlo()

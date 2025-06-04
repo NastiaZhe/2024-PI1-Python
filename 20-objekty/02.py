@@ -8,10 +8,10 @@ class Auto:
 
 auta = [
 
-    Auto("Mercedes", "červená"),
+    Auto("Mustang", "červená"),
     Auto("Corvette", "ružová"),
     Auto("Koenigsegg", "černá"),
-    Auto("Audi", "bielá"),
+    Auto("Dodge", "bielá"),
     Auto("Nissan", "fialová"),
     Auto("Subaru", "modrá")
 ]
